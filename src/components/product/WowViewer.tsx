@@ -50,7 +50,6 @@ export function WowViewer() {
           polar={[-0.4, 0.2]} 
           azimuth={[-1, 0.75]} 
           config={{ mass: 2, tension: 400 }} 
-          snap={{ mass: 4, tension: 400 }}
         >
           <GlassObject />
         </PresentationControls>
