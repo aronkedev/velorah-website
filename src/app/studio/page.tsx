@@ -73,7 +73,7 @@ export default function Studio() {
         <div className="hidden md:flex gap-10 items-center">
           <Link href="/" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Home</Link>
           <Link href="/studio" className="text-sm font-medium text-white transition-colors underline underline-offset-8 decoration-sky-500/50">Studio</Link>
-          <Link href="#" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Work</Link>
+          <Link href="/work" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Work</Link>
           <Link href="#" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Process</Link>
         </div>
 
@@ -200,7 +200,7 @@ export default function Studio() {
               <ul className="space-y-2">
                 <li><Link href="/" className="text-sm text-zinc-500 hover:text-white transition-colors">Home</Link></li>
                 <li><Link href="/studio" className="text-sm text-white transition-colors font-medium">Studio</Link></li>
-                <li><Link href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">Work</Link></li>
+                <li><Link href="/work" className="text-sm text-zinc-500 hover:text-white transition-colors text-medium">Work</Link></li>
               </ul>
             </div>
             <div className="space-y-4 text-sm text-zinc-500">
