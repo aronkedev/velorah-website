@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Sparkles } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -46,23 +47,33 @@ export default function Home() {
 
       {/* Hero Section */}
       <main className="relative z-10 flex flex-col items-center justify-center flex-1 text-center px-6 pt-32 pb-40">
+        <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-sky-400 mb-8 animate-fade-rise">
+          <Sparkles className="h-3 w-3" />
+          The Developer UI System
+        </div>
+        
         <h1 
           className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-7xl font-normal animate-fade-rise"
           style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}
         >
-          Where <em className="not-italic text-muted-foreground">dreams</em> rise <em className="not-italic text-muted-foreground">through the silence.</em>
+          Crafting <em className="not-italic text-muted-foreground">interfaces</em> at the speed <em className="not-italic text-muted-foreground">of thought.</em>
         </h1>
         
         <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mt-8 leading-relaxed animate-fade-rise-delay">
-          We're designing tools for deep thinkers, bold creators, and quiet rebels. Amid the chaos, we build digital spaces for sharp focus and inspired work.
+          Painless mobile-first components for modern developers. Clean, copy-paste React code inspired by Apple-level aesthetics. Built for high-performance teams.
         </p>
 
-        <Link 
-          href="/login"
-          className="liquid-glass rounded-full px-14 py-5 text-base text-foreground mt-12 hover:scale-[1.03] transition-transform cursor-pointer animate-fade-rise-delay-2"
-        >
-          Launch Your First Funnel
-        </Link>
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-12 animate-fade-rise-delay-2">
+          <Link 
+            href="/library"
+            className="liquid-glass rounded-full px-14 py-5 text-base text-foreground font-medium hover:scale-[1.03] transition-transform cursor-pointer"
+          >
+            Explore Library
+          </Link>
+          <button className="px-8 py-5 text-zinc-500 hover:text-white transition-colors text-sm font-medium">
+            View Documentation
+          </button>
+        </div>
       </main>
     </div>
   )
