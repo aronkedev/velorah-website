@@ -1,37 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Velorah UI: Professional Component Platform
 
-## Getting Started
+Velorah UI is a production-level **Developer UI System & Component Platform** designed for modern engineering teams. It provides a highly interactive environment for browsing, previewing, and instantly exporting mobile-first UI components built with React and Tailwind CSS.
 
-First, run the development server:
+## 🎯 The Problem
+Developers often struggle to find truly mobile-first, professional UI components that don't require heavy refactoring. Static libraries lack the interactivity needed to test components across breakpoints before integration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✅ The Solution
+Velorah UI offers a **Split-Preview Architecture** where every component can be tested live across simulated Mobile, Tablet, and Desktop viewports. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Key Features
+- **Interactive Preview Engine**: Instant viewport switching (375px / 768px / 1280px) and dark/light mode toggling.
+- **AI Component Generator (BETA)**: A high-fidelity "Generative UI" experience for prompt-based component architecting.
+- **Mobile-First Registry**: A centralized registry of premium components (Navbars, Heros, Cards, Pricing) following a strict mobile-first paradigm.
+- **Personalized Favorites**: A persistence system to curate and save components for future projects.
+- **Editorial Journal**: A technical blog focused on modern UI design patterns and Tailwind CSS optimization.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧱 Tech Stack
+- **Framework**: Next.js 16 (App Router)
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Persistence**: LocalStorage (Favorites System)
+- **Components**: Radix UI Primitives
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
+- `/app/library`: The component explorer and preview engine.
+- `/data/components`: Centralized registry of code strings and React nodes.
+- `/components/library`: Isolated, reusable component implementations.
+- `/blog`: Editorial journal system.
 
-## Learn More
+## 💼 Interview Explanation
+This project demonstrates several senior-level engineering skills:
+1. **Isolated Preview Architecture**: Using safe containers to simulate breakpoints without breaking the parent app's layout.
+2. **Registry Pattern**: Managing UI as data for easy scalability and searchability.
+3. **Mobile-First Strategy**: All components are architected for small screens first, using breakpoints only for additive scaling.
+4. **Performance**: Optimized PrismJS syntax highlighting and Framer Motion micro-interactions.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# velorah-website
+---
+Built by **Velorah Team** — *Crafting interfaces at the speed of thought.*

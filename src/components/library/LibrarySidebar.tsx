@@ -11,12 +11,15 @@ import {
   List, 
   PenTool,
   Search,
-  Sparkles
+  Sparkles,
+  Heart
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const categories = [
   { name: 'All Components', icon: Layout, href: '/library' },
+  { name: 'AI Generator', icon: Sparkles, href: '/library/ai', pro: true },
+  { name: 'My Favorites', icon: Heart, href: '/library/favorites' },
   { name: 'Navbars', icon: NavIcon, href: '/library/navbar' },
   { name: 'Hero Sections', icon: Sparkles, href: '/library/hero' },
   { name: 'Cards', icon: CreditCard, href: '/library/cards' },
@@ -52,17 +55,22 @@ export default function LibrarySidebar() {
             key={cat.href}
             href={cat.href}
             className={cn(
-              "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all group",
+              "flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all group",
               pathname === cat.href 
                 ? "bg-white/10 text-white" 
                 : "text-zinc-400 hover:bg-white/5 hover:text-white"
             )}
           >
-            <cat.icon className={cn(
-              "h-4 w-4 transition-colors",
-              pathname === cat.href ? "text-sky-400" : "text-zinc-500 group-hover:text-sky-400"
-            )} />
-            {cat.name}
+            <div className="flex items-center gap-3">
+              <cat.icon className={cn(
+                "h-4 w-4 transition-colors",
+                pathname === cat.href ? "text-sky-400" : "text-zinc-500 group-hover:text-sky-400"
+              )} />
+              {cat.name}
+            </div>
+            {cat.pro && (
+              <span className="text-[8px] font-bold bg-sky-500/20 text-sky-400 px-1.5 py-0.5 rounded-md border border-sky-500/20">PRO</span>
+            )}
           </Link>
         ))}
       </nav>

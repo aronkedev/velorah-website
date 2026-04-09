@@ -11,7 +11,8 @@ import {
   Eye, 
   Copy, 
   Check,
-  ChevronLeft
+  ChevronLeft,
+  Heart
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -28,8 +29,26 @@ export default function ComponentDetailPage({
   const [viewport, setViewport] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
   const [viewMode, setViewMode] = useState<'preview' | 'code'>('preview');
   const [copied, setCopied] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const component = componentRegistry.find(c => c.id === slug);
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem('velorah_favorites') || '[]');
+    setIsFavorite(favorites.includes(slug));
+  }, [slug]);
+
+  const toggleFavorite = () => {
+    const favorites = JSON.parse(localStorage.getItem('velorah_favorites') || '[]');
+    let newFavorites;
+    if (favorites.includes(slug)) {
+      newFavorites = favorites.filter((id: string) => id !== slug);
+    } else {
+      newFavorites = [...favorites, slug];
+    }
+    localStorage.setItem('velorah_favorites', JSON.stringify(newFavorites));
+    setIsFavorite(!isFavorite);
+  };
 
   useEffect(() => {
     if (viewMode === 'code') {
@@ -95,9 +114,22 @@ export default function ComponentDetailPage({
           </div>
         )}
 
-        <div className="flex items-center gap-2 bg-white/5 p-1 rounded-xl border border-white/5">
+        <div className="flex items-center gap-2">
           <button 
-            onClick={() => setViewMode('preview')}
+            onClick={toggleFavorite}
+            className={cn(
+              "p-2 rounded-xl border transition-all",
+              isFavorite 
+                ? "bg-red-500/10 border-red-500/20 text-red-500" 
+                : "bg-white/5 border-white/5 text-zinc-500 hover:text-white"
+            )}
+          >
+            <Heart className={cn("h-5 w-5", isFavorite && "fill-current")} />
+          </button>
+          
+          <div className="flex items-center gap-2 bg-white/5 p-1 rounded-xl border border-white/5">
+            <button 
+              onClick={() => setViewMode('preview')}
             className={cn(
               "flex items-center gap-2 px-4 py-1.5 rounded-lg text-xs font-medium transition-all",
               viewMode === 'preview' ? "bg-white text-black" : "text-zinc-500 hover:text-white"
@@ -117,7 +149,8 @@ export default function ComponentDetailPage({
             Code
           </button>
         </div>
-      </header>
+      </div>
+    </header>
 
       {/* Main Content */}
       <main className="flex-1 min-h-0 bg-zinc-950 relative overflow-hidden">
