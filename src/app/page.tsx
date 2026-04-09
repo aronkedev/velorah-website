@@ -31,9 +31,17 @@ export default function Home() {
           <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Reach Us</Link>
         </div>
 
-        <button className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-transform cursor-pointer">
-          Begin Journey
-        </button>
+        <div className="flex items-center gap-4">
+          <Link href="/login" className="text-sm text-foreground hover:opacity-70 transition-opacity">
+            Sign In
+          </Link>
+          <Link 
+            href="/login" 
+            className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-transform cursor-pointer"
+          >
+            Get Started
+          </Link>
+        </div>
       </nav>
 
       {/* Hero Section */}
@@ -49,9 +57,12 @@ export default function Home() {
           We're designing tools for deep thinkers, bold creators, and quiet rebels. Amid the chaos, we build digital spaces for sharp focus and inspired work.
         </p>
 
-        <button className="liquid-glass rounded-full px-14 py-5 text-base text-foreground mt-12 hover:scale-[1.03] transition-transform cursor-pointer animate-fade-rise-delay-2">
-          Begin Journey
-        </button>
+        <Link 
+          href="/login"
+          className="liquid-glass rounded-full px-14 py-5 text-base text-foreground mt-12 hover:scale-[1.03] transition-transform cursor-pointer animate-fade-rise-delay-2"
+        >
+          Launch Your First Funnel
+        </Link>
       </main>
     </div>
   )
