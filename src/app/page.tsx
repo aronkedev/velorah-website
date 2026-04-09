@@ -25,8 +25,7 @@ export default function Home() {
         </div>
         
         <div className="hidden md:flex gap-8 items-center">
-          <Link href="#services" className="text-sm text-foreground transition-colors">Services</Link>
-          <Link href="#why" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Why</Link>
+          <Link href="#why" className="text-sm text-foreground transition-colors">Why</Link>
           <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Work</Link>
           <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</Link>
         </div>
@@ -77,32 +76,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Integrated Services (Subtle Styling) */}
-        <section id="services" className="max-w-7xl mx-auto px-8 py-32 bg-black/20 backdrop-blur-sm border-t border-white/5">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-             <div className="space-y-4">
-               <MousePointer2 className="h-8 w-8 text-sky-400 mb-2" />
-               <h3 className="text-2xl font-display italic" style={{ fontFamily: "var(--font-display)" }}>Landing Pages</h3>
-               <p className="text-sm text-muted-foreground leading-relaxed">
-                 Conversion-focused design for startups and single-product launches.
-               </p>
-             </div>
-             <div className="space-y-4">
-               <Globe className="h-8 w-8 text-indigo-400 mb-2" />
-               <h3 className="text-2xl font-display italic" style={{ fontFamily: "var(--font-display)" }}>Business Sites</h3>
-               <p className="text-sm text-muted-foreground leading-relaxed">
-                 Professional multi-page platforms for local brands and growing companies.
-               </p>
-             </div>
-             <div className="space-y-4">
-               <Layers className="h-8 w-8 text-purple-400 mb-2" />
-               <h3 className="text-2xl font-display italic" style={{ fontFamily: "var(--font-display)" }}>Portfolios</h3>
-               <p className="text-sm text-muted-foreground leading-relaxed">
-                 Immersive showcases for artists, architects, and high-end creators.
-               </p>
-             </div>
-          </div>
-        </section>
 
         {/* Why Velorah (Simple Trust Points) */}
         <section id="why" className="max-w-7xl mx-auto px-8 py-32 border-t border-white/5">
@@ -142,7 +115,6 @@ export default function Home() {
               <p className="font-medium">Studio</p>
               <ul className="space-y-2 text-muted-foreground">
                 <li>Work</li>
-                <li>Services</li>
                 <li>About</li>
               </ul>
             </div>
