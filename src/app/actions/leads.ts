@@ -6,6 +6,8 @@ import { revalidatePath } from 'next/cache'
 
 export async function getLeads() {
   const supabase = await createClient()
+  if (!supabase) return []
+  
   const { data, error } = await supabase
     .from('leads')
     .select('*')

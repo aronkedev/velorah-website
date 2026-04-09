@@ -6,6 +6,8 @@ import { revalidatePath } from 'next/cache'
 
 export async function getFunnels() {
   const supabase = await createClient()
+  if (!supabase) return []
+  
   const { data, error } = await supabase
     .from('funnels')
     .select('*')

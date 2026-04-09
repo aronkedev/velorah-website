@@ -10,8 +10,19 @@ import {
 export default async function DashboardPage() {
   const supabase = await createClient()
   
-  // Real data fetching would happen here
-  // For the V1 prototype, we'll fetch from the leads table to get a count
+  // Handle case where Supabase is not configured yet
+  if (!supabase) {
+    return (
+      <div className="flex flex-col items-center justify-center h-full space-y-4">
+        <h2 className="text-2xl font-display font-medium">Database Not Configured</h2>
+        <p className="text-zinc-400">Please set up your .env file with Supabase credentials to view your dashboard.</p>
+        <code className="bg-white/5 p-4 rounded-xl text-xs uppercase tracking-widest border border-white/5">
+          Check .env.example for instructions
+        </code>
+      </div>
+    )
+  }
+
   const { count: leadsCount } = await supabase
     .from('leads')
     .select('*', { count: 'exact', head: true })
