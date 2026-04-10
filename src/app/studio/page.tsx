@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Sparkles, ArrowRight, Check, HelpCircle, ArrowUpRight } from 'lucide-react';
+import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
 
 export default function Studio() {
   const tiers = [
@@ -64,31 +65,9 @@ export default function Studio() {
         />
       </video>
 
-      {/* Navigation */}
-      <nav className="relative z-50 flex flex-row items-center justify-between px-8 py-8 max-w-7xl mx-auto w-full">
-        <Link href="/" className="text-3xl tracking-tight text-white font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
-          Velorah<sup className="text-xs">®</sup>
-        </Link>
-        
-        <div className="hidden md:flex gap-10 items-center">
-          <Link href="/" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Home</Link>
-          <Link href="/studio" className="text-sm font-medium text-white transition-colors underline underline-offset-8 decoration-sky-500/50">Studio</Link>
-          <Link href="/work" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Work</Link>
-          <Link href="/about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">About</Link>
-          <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Reach Us</Link>
-        </div>
+      <VelorahNavbar />
 
-        <div className="flex items-center gap-6">
-          <Link 
-            href="/contact" 
-            className="liquid-glass rounded-full px-7 py-2.5 text-sm font-medium text-white hover:scale-[1.02] transition-transform cursor-pointer border border-white/5 shadow-2xl"
-          >
-            Start Project
-          </Link>
-        </div>
-      </nav>
-
-      <main className="relative z-10">
+      <main className="relative z-10 pt-28">
         {/* Page Hero */}
         <section className="flex flex-col items-center justify-center text-center px-6 pt-32 pb-24">
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-widest text-sky-400 mb-8 animate-fade-rise">

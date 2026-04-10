@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Send, CheckCircle2, ChevronDown } from 'lucide-react';
+import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -37,24 +38,9 @@ export default function Contact() {
         />
       </video>
 
-      {/* Simplified Navigation (No Auth Buttons) */}
-      <nav className="relative z-50 flex flex-row items-center justify-between px-8 py-8 max-w-7xl mx-auto w-full">
-        <Link href="/" className="text-3xl tracking-tight text-white font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
-          Velorah<sup className="text-xs">®</sup>
-        </Link>
-        <div className="hidden md:flex gap-10 items-center">
-          <Link href="/" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Home</Link>
-          <Link href="/studio" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Studio</Link>
-          <Link href="/work" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Work</Link>
-          <Link href="/about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">About</Link>
-          <Link href="/contact" className="text-sm font-medium text-white transition-colors underline underline-offset-8 decoration-sky-500/50">Reach Us</Link>
-        </div>
-        <div className="flex items-center gap-6">
-           {/* Sign In / Get Started removed per request */}
-        </div>
-      </nav>
+      <VelorahNavbar />
 
-      <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-20">
+      <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-20 pt-28">
         <AnimatePresence mode="wait">
           {!submitted ? (
             <motion.div 
