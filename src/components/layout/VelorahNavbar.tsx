@@ -42,7 +42,7 @@ export function VelorahNavbar() {
       <nav 
         className={cn(
           "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 px-8 py-8 w-full",
-          scrolled ? "py-4 bg-black/20 backdrop-blur-2xl border-b border-white/5" : "bg-transparent"
+          scrolled ? "py-4 bg-zinc-950/90 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
         )}
       >
         <div className="max-w-7xl mx-auto flex flex-row items-center justify-between w-full">
@@ -64,7 +64,7 @@ export function VelorahNavbar() {
                 className={cn(
                   "text-sm font-medium transition-all duration-300 hover:text-white",
                   isActive(link.href) 
-                    ? "text-white underline underline-offset-8 decoration-sky-500/50" 
+                    ? "text-white underline underline-offset-8 decoration-white/30" 
                     : "text-zinc-400"
                 )}
               >
