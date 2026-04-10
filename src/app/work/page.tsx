@@ -23,7 +23,7 @@ export default function Work() {
     <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden bg-[#050B14] text-white">
       {/* Background Visual: Shared Cinematic Fog Video */}
       <video
-        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-40 md:opacity-100"
+        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-60 md:opacity-100"
         autoPlay
         loop
         muted
@@ -47,7 +47,6 @@ export default function Work() {
           <Link href="/about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">About</Link>
           <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Reach Us</Link>
         </div>
-
         <div className="flex items-center gap-6">
           <Link 
             href="/contact" 
@@ -157,6 +156,7 @@ export default function Work() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-16">
             <div className="space-y-4">
               <h5 className="text-xs font-bold uppercase tracking-widest text-white">Navigation</h5>
+              <ul className="space-y-2">
                 <li><Link href="/studio" className="text-sm text-zinc-500 hover:text-white transition-colors">Studio</Link></li>
                 <li><Link href="/work" className="text-white font-medium">Work</Link></li>
                 <li><Link href="/about" className="text-sm text-zinc-500 hover:text-white transition-colors">About</Link></li>

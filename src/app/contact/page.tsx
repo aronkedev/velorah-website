@@ -41,6 +41,7 @@ export default function Contact() {
       <nav className="relative z-50 flex flex-row items-center justify-between px-8 py-8 max-w-7xl mx-auto w-full">
         <Link href="/" className="text-3xl tracking-tight text-white font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
           Velorah<sup className="text-xs">®</sup>
+        </Link>
         <div className="hidden md:flex gap-10 items-center">
           <Link href="/" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Home</Link>
           <Link href="/studio" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Studio</Link>
@@ -225,8 +226,40 @@ export default function Contact() {
         </AnimatePresence>
       </main>
 
-      <footer className="relative z-10 py-12 px-8 text-center text-[10px] text-zinc-600 uppercase tracking-widest">
-         © 2024 Velorah Studio — All Rights Reserved
+      {/* Footer */}
+      <footer className="border-t border-white/5 py-20 px-8 relative z-10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+          <div className="space-y-6">
+            <Link href="/" className="text-3xl tracking-tight text-white font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
+              Velorah<sup className="text-xs">®</sup>
+            </Link>
+            <p className="text-zinc-500 text-sm max-w-xs leading-relaxed">
+               Artistry meets architecture. We build premium digital homes for the ambitious.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-16">
+            <div className="space-y-4">
+              <h5 className="text-xs font-bold uppercase tracking-widest text-white">Navigation</h5>
+              <ul className="space-y-2">
+                <li><Link href="/studio" className="text-sm text-zinc-500 hover:text-white transition-colors">Studio</Link></li>
+                <li><Link href="/work" className="text-sm text-zinc-500 hover:text-white transition-colors">Work</Link></li>
+                <li><Link href="/about" className="text-sm text-zinc-500 hover:text-white transition-colors">About</Link></li>
+                <li><Link href="/contact" className="text-sm text-white transition-colors font-medium">Reach Us</Link></li>
+              </ul>
+            </div>
+            <div className="space-y-4 text-sm text-zinc-500">
+               <h5 className="text-xs font-bold uppercase tracking-widest text-white">Connect</h5>
+               <ul className="space-y-2">
+                 <li>Twitter</li>
+                 <li>Instagram</li>
+               </ul>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600">
+          <p>© 2024 Velorah Studio. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );

@@ -188,6 +188,7 @@ export default function About() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-16">
             <div className="space-y-4">
               <h5 className="text-xs font-bold uppercase tracking-widest text-white">Navigation</h5>
+              <ul className="space-y-2">
                 <li><Link href="/studio" className="text-sm text-zinc-500 hover:text-white transition-colors">Studio</Link></li>
                 <li><Link href="/work" className="text-sm text-zinc-500 hover:text-white transition-colors">Work</Link></li>
                 <li><Link href="/about" className="text-sm text-white transition-colors font-medium">About</Link></li>

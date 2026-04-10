@@ -6,7 +6,7 @@ export default function Home() {
     <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden">
       {/* Video Background (Restored from Original UI) */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-60 md:opacity-100"
         autoPlay
         loop
         muted
@@ -18,18 +18,18 @@ export default function Home() {
         />
       </video>
 
-      {/* Navigation (Restored Layout with Agency Links) */}
-      <nav className="relative z-10 flex flex-row items-center justify-between px-8 py-6 max-w-7xl mx-auto w-full">
-        <div className="text-3xl tracking-tight text-foreground font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
+      {/* Navigation */}
+      <nav className="relative z-50 flex flex-row items-center justify-between px-8 py-8 max-w-7xl mx-auto w-full">
+        <Link href="/" className="text-3xl tracking-tight text-white font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
           Velorah<sup className="text-xs">®</sup>
-        </div>
+        </Link>
         
-        <div className="hidden md:flex gap-8 items-center">
-          <Link href="/" className="text-sm text-foreground transition-colors font-medium">Home</Link>
-          <Link href="/studio" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Studio</Link>
-          <Link href="/work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Work</Link>
-          <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link>
-          <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Reach Us</Link>
+        <div className="hidden md:flex gap-10 items-center">
+          <Link href="/" className="text-sm font-medium text-white transition-colors underline underline-offset-8 decoration-sky-500/50">Home</Link>
+          <Link href="/studio" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Studio</Link>
+          <Link href="/work" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Work</Link>
+          <Link href="/about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">About</Link>
+          <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Reach Us</Link>
         </div>
 
         <div className="flex items-center gap-4">
@@ -107,31 +107,38 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="relative z-10 border-t border-white/5 py-20 px-8 bg-black/40">
+      <footer className="border-t border-white/5 py-20 px-8 relative z-10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-          <div className="text-3xl tracking-tight text-foreground font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
-            Velorah<sup className="text-xs">®</sup>
+          <div className="space-y-6">
+            <Link href="/" className="text-3xl tracking-tight text-white font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
+              Velorah<sup className="text-xs">®</sup>
+            </Link>
+            <p className="text-zinc-500 text-sm max-w-xs leading-relaxed">
+               Artistry meets architecture. We build premium digital homes for the ambitious.
+            </p>
           </div>
-          <div className="flex gap-20 text-sm">
+          
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-16">
             <div className="space-y-4">
-              <p className="font-medium">Studio</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><Link href="/studio" className="hover:text-foreground transition-colors">Studio</Link></li>
-                <li><Link href="/work" className="hover:text-foreground transition-colors">Work</Link></li>
-                <li><Link href="/about" className="hover:text-foreground transition-colors">About</Link></li>
+              <h5 className="text-xs font-bold uppercase tracking-widest text-white">Navigation</h5>
+              <ul className="space-y-2">
+                <li><Link href="/studio" className="text-sm text-zinc-500 hover:text-white transition-colors">Studio</Link></li>
+                <li><Link href="/work" className="text-sm text-zinc-500 hover:text-white transition-colors">Work</Link></li>
+                <li><Link href="/about" className="text-sm text-zinc-500 hover:text-white transition-colors">About</Link></li>
+                <li><Link href="/contact" className="text-sm text-zinc-500 hover:text-white transition-colors">Reach Us</Link></li>
               </ul>
             </div>
-            <div className="space-y-4">
-              <p className="font-medium">Connect</p>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>Instagram</li>
-                <li>Twitter</li>
-              </ul>
+            <div className="space-y-4 text-sm text-zinc-500">
+               <h5 className="text-xs font-bold uppercase tracking-widest text-white">Connect</h5>
+               <ul className="space-y-2">
+                 <li>Twitter</li>
+                 <li>Instagram</li>
+               </ul>
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto mt-20 text-[10px] text-zinc-600 uppercase tracking-widest">
-          © 2024 Velorah Studio — All Rights Reserved
+        <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600">
+          <p>© 2024 Velorah Studio. All rights reserved.</p>
         </div>
       </footer>
     </div>

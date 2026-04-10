@@ -52,7 +52,7 @@ export default function Studio() {
     <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden bg-[#050B14] text-white">
       {/* Background Visual: Shared Cinematic Fog Video */}
       <video
-        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-40 md:opacity-100"
+        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-60 md:opacity-100"
         autoPlay
         loop
         muted
