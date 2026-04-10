@@ -10,6 +10,7 @@ export default function AuthPage() {
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     setLoading(true)
     const formData = new FormData(e.currentTarget)
     if (isLogin) {
@@ -45,7 +46,7 @@ export default function AuthPage() {
             </p>
           </div>
 
-          <form action={isLogin ? login : signup} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <label className="text-xs font-medium uppercase tracking-widest text-muted-foreground ml-1">
                 Email Address

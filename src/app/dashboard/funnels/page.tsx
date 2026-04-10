@@ -1,6 +1,5 @@
 import { getFunnels, deleteFunnel, createFunnel } from "@/app/actions/funnels"
 import { 
-  Plus, 
   Settings, 
   Trash2, 
   ExternalLink, 
@@ -8,22 +7,17 @@ import {
   Sparkles
 } from "lucide-react"
 import Link from "next/link"
+import { DashboardPage } from "@/components/dashboard/DashboardPage"
 
 export default async function FunnelsPage() {
   const funnels = await getFunnels()
 
   return (
-    <div className="space-y-8 max-w-6xl">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-4xl font-display font-medium tracking-tight">Campaign Funnels</h1>
-          <p className="text-muted-foreground mt-2">Deploy high-converting landing pages in seconds.</p>
-        </div>
-        <button className="bg-white text-black font-medium px-6 py-3 rounded-2xl hover:opacity-90 transition-all flex items-center gap-2">
-          <Plus className="h-5 w-5" />
-          New Funnel
-        </button>
-      </div>
+    <DashboardPage 
+      title="Campaign Funnels" 
+      description="Deploy high-converting landing pages in seconds."
+      buttonText="New Funnel"
+    >
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {funnels.length === 0 ? (
@@ -79,10 +73,7 @@ export default async function FunnelsPage() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-white/5 relative z-10">
-                <form action={async () => {
-                  'use server'
-                  await deleteFunnel(funnel.id)
-                }}>
+                <form action={deleteFunnel.bind(null, funnel.id)}>
                   <button className="w-full text-zinc-500 hover:text-red-400 flex items-center justify-center gap-2 text-sm font-medium transition-colors">
                     <Trash2 className="h-4 w-4" />
                     Archive Campaign
@@ -93,6 +84,6 @@ export default async function FunnelsPage() {
           ))
         )}
       </div>
-    </div>
+    </DashboardPage>
   )
 }

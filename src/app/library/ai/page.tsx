@@ -138,7 +138,7 @@ export default function AIGeneratorPage() {
                 </div>
                 <div className="flex items-center gap-2">
                    <button onClick={() => setGeneratedCode(null)} className="p-2.5 bg-white/5 hover:bg-red-500/10 hover:text-red-400 border border-white/5 rounded-xl transition-all"><Trash2 className="h-4 w-4"/></button>
-                   <button className="flex items-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl text-xs font-medium transition-all"><Copy className="h-4 w-4"/> Copy Code</button>
+                   <button onClick={() => navigator.clipboard.writeText(generatedCode || '')} className="flex items-center gap-2 px-4 py-2.5 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl text-xs font-medium transition-all"><Copy className="h-4 w-4"/> Copy Code</button>
                 </div>
               </div>
 

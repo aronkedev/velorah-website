@@ -2,22 +2,14 @@ import { componentRegistry } from "@/data/components"
 import Link from "next/link"
 import { ArrowRight, Box } from "lucide-react"
 
-export default async function LibraryCategoryPage({
-  params
-}: {
-  params: { category: string }
-}) {
-  const { category } = await params
-  
-  const components = category 
-    ? componentRegistry.filter(c => c.category === category)
-    : componentRegistry
+export default function LibraryCategoryPage() {
+  const components = componentRegistry
 
   return (
     <div className="p-8 md:p-12 space-y-12 max-w-7xl mx-auto">
       <div className="space-y-4">
         <h1 className="text-4xl md:text-5xl font-display font-medium tracking-tight capitalize">
-          {category ? `${category}s` : 'All Components'}
+          All Components
         </h1>
         <p className="text-zinc-400 max-w-2xl text-lg">
           Explore our collection of premium, mobile-first components designed for modern web applications.

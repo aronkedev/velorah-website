@@ -1,28 +1,22 @@
 import { getLeads, deleteLead, createLead } from "@/app/actions/leads"
 import { 
-  Plus, 
   Trash2, 
   Mail, 
   User, 
   Calendar,
   MoreVertical
 } from "lucide-react"
+import { DashboardPage } from "@/components/dashboard/DashboardPage"
 
 export default async function LeadsPage() {
   const leads = await getLeads()
 
   return (
-    <div className="space-y-8 max-w-6xl">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-4xl font-display font-medium tracking-tight">Leads Management</h1>
-          <p className="text-muted-foreground mt-2">Manage and track your potential customers.</p>
-        </div>
-        <button className="bg-white text-black font-medium px-6 py-3 rounded-2xl hover:opacity-90 transition-all flex items-center gap-2">
-          <Plus className="h-5 w-5" />
-          Add Lead
-        </button>
-      </div>
+    <DashboardPage 
+      title="Leads Management" 
+      description="Manage and track your potential customers."
+      buttonText="Add Lead"
+    >
 
       <div className="liquid-glass rounded-[40px] border border-white/5 overflow-hidden">
         <div className="overflow-x-auto">
@@ -80,10 +74,7 @@ export default async function LeadsPage() {
                         <button className="p-2 hover:bg-white/10 rounded-xl transition-colors text-zinc-400 hover:text-white">
                           <MoreVertical className="h-5 w-5" />
                         </button>
-                        <form action={async () => {
-                          'use server'
-                          await deleteLead(lead.id)
-                        }}>
+                        <form action={deleteLead.bind(null, lead.id)}>
                           <button className="p-2 hover:bg-red-500/10 rounded-xl transition-colors text-zinc-400 hover:text-red-400">
                             <Trash2 className="h-5 w-5" />
                           </button>
@@ -97,6 +88,6 @@ export default async function LeadsPage() {
           </table>
         </div>
       </div>
-    </div>
+    </DashboardPage>
   )
 }

@@ -22,6 +22,7 @@ export function VelorahNavbar() {
     { name: 'Home', href: '/' },
     { name: 'Studio', href: '/studio' },
     { name: 'Work', href: '/work' },
+    { name: 'Journal', href: '/journal' },
     { name: 'About', href: '/about' },
     { name: 'Reach Us', href: '/contact' },
   ];

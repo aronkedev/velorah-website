@@ -70,7 +70,7 @@ export default function ComponentDetailPage({
       <header className="h-16 border-b border-white/5 bg-black px-8 flex items-center justify-between z-20">
         <div className="flex items-center gap-4">
           <Link 
-            href={`/library/${category}`}
+            href="/library"
             className="p-2 hover:bg-white/5 rounded-xl transition-colors text-zinc-500 hover:text-white"
           >
             <ChevronLeft className="h-5 w-5" />
