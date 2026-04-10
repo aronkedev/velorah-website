@@ -25,8 +25,8 @@ export default function Home() {
         </div>
         
         <div className="hidden md:flex gap-8 items-center">
-          <Link href="/studio" className="text-sm text-foreground transition-colors">Studio</Link>
-          <Link href="#why" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Why</Link>
+          <Link href="/studio" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Studio</Link>
+          <Link href="/work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Work</Link>
           <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link>
           <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Reach Us</Link>
         </div>
@@ -115,7 +115,7 @@ export default function Home() {
             <div className="space-y-4">
               <p className="font-medium">Studio</p>
               <ul className="space-y-2 text-muted-foreground">
-                <li><Link href="/studio" className="hover:text-foreground transition-colors">Services</Link></li>
+                <li><Link href="/studio" className="hover:text-foreground transition-colors">Studio</Link></li>
                 <li><Link href="/work" className="hover:text-foreground transition-colors">Work</Link></li>
                 <li><Link href="/about" className="hover:text-foreground transition-colors">About</Link></li>
               </ul>
