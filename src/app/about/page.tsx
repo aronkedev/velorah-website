@@ -3,36 +3,9 @@ import { Sparkles, ArrowRight, ShieldCheck, Heart, Zap, Code, Layout, Globe, Sen
 import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
 import { Footer } from '@/components/layout/Footer';
 
-export default function About() {
-  const values = [
-    {
-      title: "Clean Code",
-      description: "Architecture that's as beautiful behind the scenes as it is on the surface. Scalable, maintainable, and efficient.",
-      icon: <Code className="h-6 w-6 text-sky-400" />
-    },
-    {
-      title: "Honest Communication",
-      description: "No corporate fluff. Direct collaboration, transparent timelines, and clear expectations every step of the way.",
-      icon: <Heart className="h-6 w-6 text-indigo-400" />
-    },
-    {
-      title: "Fast Delivery",
-      description: "High-performance websites built at the speed of thought. We value your time as much as the end product.",
-      icon: <Zap className="h-6 w-6 text-purple-400" />
-    }
-  ];
+import { companyValues, skillSet } from '@/data/site-content';
 
-  const skills = [
-    "HTML5 & Semantic Web",
-    "CSS3 & Modern Styling",
-    "JavaScript (ES6+)",
-    "TypeScript",
-    "React & Next.js",
-    "Responsive Design",
-    "Tailwind CSS",
-    "Vercel Deployment",
-    "Glassmorphic UI"
-  ];
+export default function About() {
 
   return (
     <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden bg-[#050B14] text-white">
@@ -95,7 +68,7 @@ export default function About() {
         {/* Values Section */}
         <section className="max-w-7xl mx-auto px-8 py-32">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, idx) => (
+            {companyValues.map((value, idx) => (
               <div key={idx} className="p-10 rounded-[32px] bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all backdrop-blur-md">
                 <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-8 border border-white/10">
                   {value.icon}
@@ -122,7 +95,7 @@ export default function About() {
             </div>
             
             <div className="grid grid-cols-2 gap-4">
-              {skills.map((skill, idx) => (
+              {skillSet.map((skill, idx) => (
                 <div key={idx} className="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.02] border border-white/5 text-sm text-zinc-400">
                   <div className="h-1.5 w-1.5 rounded-full bg-sky-500/50" />
                   {skill}

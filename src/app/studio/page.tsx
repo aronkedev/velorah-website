@@ -3,52 +3,9 @@ import { Sparkles, ArrowRight, Check, HelpCircle, ArrowUpRight } from 'lucide-re
 import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
 import { Footer } from '@/components/layout/Footer';
 
-export default function Studio() {
-  const tiers = [
-    {
-      name: "Landing Page",
-      description: "A single, high-converting page engineered for speed and precision. Perfect for personal brands or product launches.",
-      price: "$200",
-      features: ["1 Custom Page", "3-5 Day Delivery", "SEO Optimization", "Mobile Responsive", "Analytics Integration"],
-      cta: "Start Promo",
-      highlight: false
-    },
-    {
-      name: "Business Website",
-      description: "A complete digital hub for growing teams and brands. Multi-page architecture built for authority and results.",
-      price: "$500",
-      features: ["3-5 Custom Pages", "Contact Forms", "Advanced SEO", "CMS Integration", "2 Weeks Delivery"],
-      cta: "Build My Brand",
-      highlight: true
-    },
-    {
-      name: "Custom Project",
-      description: "Bespoke digital architecture for complex visions. Tailored functionality, discussed directly on a discovery call.",
-      price: "Let's Talk",
-      features: ["Unlimited Scope", "Dedicated Timeline", "Custom Functionality", "Priority Support", "Direct Strategy"],
-      cta: "Schedule Call",
-      highlight: false
-    }
-  ];
+import { pricingTiers, studioFAQs } from '@/data/site-content';
 
-  const faqs = [
-    {
-      q: "How long does it take?",
-      a: "Landing pages usually ship within 3-5 days. Larger business sites take 2-3 weeks depending on complexity. We prioritize speed without sacrificing aesthetic quality."
-    },
-    {
-      q: "Do you do redesigns?",
-      a: "Absolutely. We can take your existing site and bring it into the modern era with premium aesthetics, better performance, and glassmorphic designs."
-    },
-    {
-      q: "What if I need specialized features?",
-      a: "Our Custom Projects are built for exactly that. Whether you need an e-commerce setup, a booking system, or a custom dashboard, we've got you covered."
-    },
-    {
-      q: "Is hosting setup included?",
-      a: "Yes. We'll handle the technical heavy lifting, from domain mapping to setting up high-performance hosting on platforms like Vercel or Netlify."
-    }
-  ];
+export default function Studio() {
 
   return (
     <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden bg-[#050B14] text-white">
@@ -91,7 +48,7 @@ export default function Studio() {
         {/* Pricing Tiers Grid */}
         <section className="max-w-7xl mx-auto px-8 pb-32">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {tiers.map((tier, idx) => (
+            {pricingTiers.map((tier, idx) => (
               <div 
                 key={idx} 
                 className={`flex flex-col p-10 rounded-[32px] border transition-all duration-500 hover:translate-y-[-4px] group backdrop-blur-md ${
@@ -146,7 +103,7 @@ export default function Studio() {
            </div>
 
            <div className="space-y-6">
-              {faqs.map((faq, idx) => (
+              {studioFAQs.map((faq, idx) => (
                 <div key={idx} className="p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors group">
                    <div className="flex items-start gap-4">
                       <HelpCircle className="h-6 w-6 text-sky-400 shrink-0 mt-1" />

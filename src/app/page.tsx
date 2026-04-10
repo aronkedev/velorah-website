@@ -3,6 +3,8 @@ import { Sparkles, ArrowRight, Zap, ShieldCheck, User } from 'lucide-react';
 import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
 import { Footer } from '@/components/layout/Footer';
 
+import { brandFeatures } from '@/data/site-content';
+
 export default function Home() {
   return (
     <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden">
@@ -59,27 +61,15 @@ export default function Home() {
         {/* Why Velorah (Simple Trust Points) */}
         <section id="why" className="max-w-7xl mx-auto px-8 py-32 border-t border-white/5">
            <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-              <div className="flex gap-4">
-                <Zap className="h-5 w-5 text-zinc-400 shrink-0" />
-                <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest mb-2">High Performance</h4>
-                  <p className="text-xs text-muted-foreground text-zinc-500">Built for speed and SEO optimization.</p>
+              {brandFeatures.map((feature, idx) => (
+                <div key={idx} className="flex gap-4">
+                  {feature.icon}
+                  <div>
+                    <h4 className="text-sm font-bold uppercase tracking-widest mb-2">{feature.title}</h4>
+                    <p className="text-xs text-muted-foreground text-zinc-500">{feature.description}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-4">
-                <ShieldCheck className="h-5 w-5 text-zinc-400 shrink-0" />
-                <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest mb-2">Premium Design</h4>
-                  <p className="text-xs text-muted-foreground text-zinc-500">No templates. Only bespoke architecture.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <User className="h-5 w-5 text-zinc-400 shrink-0" />
-                <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest mb-2">Direct Service</h4>
-                  <p className="text-xs text-muted-foreground text-zinc-500">Work directly with the artisans.</p>
-                </div>
-              </div>
+              ))}
            </div>
         </section>
       </main>

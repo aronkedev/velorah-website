@@ -3,23 +3,9 @@ import { Sparkles, ArrowRight, Globe, Code2, Cpu, ExternalLink } from 'lucide-re
 import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
 import { Footer } from '@/components/layout/Footer';
 
+import { portfolioProjects } from '@/data/site-content';
+
 export default function Work() {
-  const projects = [
-    {
-      name: "Velorah",
-      description: "A premium freelance agency platform featuring cinematic visuals and glassmorphic UI.",
-      tech: ["Next.js", "Tailwind CSS", "Framer Motion", "High Performance"],
-      link: "https://velorah-website.vercel.app",
-      icon: <Globe className="h-8 w-8 text-sky-400" />
-    },
-    {
-      name: "Aron Ke Portfolio",
-      description: "A personal showcase for high-end web development and immersive 3D experiences.",
-      tech: ["React", "Three.js", "Full-Stack", "3D Visualization"],
-      link: "https://aronke.vercel.app",
-      icon: <Cpu className="h-8 w-8 text-indigo-400" />
-    }
-  ];
 
   return (
     <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden bg-[#050B14] text-white">
@@ -62,7 +48,7 @@ export default function Work() {
         {/* Projects Grid */}
         <section className="max-w-7xl mx-auto px-8 pb-48">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {projects.map((project, idx) => (
+            {portfolioProjects.map((project, idx) => (
               <div 
                 key={idx} 
                 className="group relative flex flex-col p-12 rounded-[40px] bg-white/[0.02] border border-white/10 hover:border-white/20 transition-all duration-500 backdrop-blur-md overflow-hidden"
