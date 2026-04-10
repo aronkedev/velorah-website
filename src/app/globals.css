@@ -15,7 +15,7 @@
 
 @layer base {
   :root {
-    --background: 201 100% 13%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --muted: 0 0% 10%;
     --muted-foreground: 240 4% 66%;

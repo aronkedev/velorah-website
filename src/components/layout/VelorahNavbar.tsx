@@ -41,8 +41,7 @@ export function VelorahNavbar() {
     <>
       <nav 
         className={cn(
-          "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 px-8 py-8 w-full",
-          scrolled ? "py-4 bg-zinc-950/90 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
+          "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 px-8 py-8 w-full bg-transparent"
         )}
       >
         <div className="max-w-7xl mx-auto flex flex-row items-center justify-between w-full">
@@ -104,12 +103,11 @@ export function VelorahNavbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[90] bg-[#050B14] lg:hidden flex flex-col pt-32 px-8"
+            className="fixed inset-0 z-[90] bg-zinc-950 lg:hidden flex flex-col pt-32 px-8"
           >
-            {/* Background elements for premium feel */}
-            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-              <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-sky-500/20 blur-[120px] rounded-full" />
-              <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-500/10 blur-[120px] rounded-full" />
+            <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+              <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-white/5 blur-[120px] rounded-full" />
+              <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-white/5 blur-[120px] rounded-full" />
             </div>
 
             <div className="relative z-10 space-y-8">
@@ -133,7 +131,7 @@ export function VelorahNavbar() {
                     {isActive(link.href) && (
                       <motion.span 
                         layoutId="active-mobile"
-                        className="inline-block ml-4 h-2 w-2 rounded-full bg-sky-500"
+                        className="inline-block ml-4 h-2 w-2 rounded-full bg-white/50"
                       />
                     )}
                   </Link>
