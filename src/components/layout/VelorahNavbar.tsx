@@ -42,7 +42,7 @@ export function VelorahNavbar() {
       <nav 
         className={cn(
           "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 px-8 py-8 w-full",
-          scrolled ? "py-4 bg-[#050B14]/80 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
+          scrolled ? "py-4 bg-black/20 backdrop-blur-2xl border-b border-white/5" : "bg-transparent"
         )}
       >
         <div className="max-w-7xl mx-auto flex flex-row items-center justify-between w-full">
