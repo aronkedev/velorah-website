@@ -25,6 +25,7 @@ export default function Home() {
         </div>
         
         <div className="hidden md:flex gap-8 items-center">
+          <Link href="/" className="text-sm text-foreground transition-colors font-medium">Home</Link>
           <Link href="/studio" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Studio</Link>
           <Link href="/work" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Work</Link>
           <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link>
