@@ -66,7 +66,7 @@ export default function About() {
             href="/contact" 
             className="liquid-glass rounded-full px-7 py-2.5 text-sm font-medium text-white hover:scale-[1.02] transition-transform cursor-pointer border border-white/5 shadow-2xl"
           >
-            Start Project
+            Reach Us
           </Link>
         </div>
       </nav>

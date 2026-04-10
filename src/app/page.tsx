@@ -28,7 +28,7 @@ export default function Home() {
           <Link href="/studio" className="text-sm text-foreground transition-colors">Studio</Link>
           <Link href="#why" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Why</Link>
           <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</Link>
-          <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</Link>
+          <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Reach Us</Link>
         </div>
 
         <div className="flex items-center gap-4">

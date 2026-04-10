@@ -45,7 +45,7 @@ export default function Work() {
           <Link href="/" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Home</Link>
           <Link href="/studio" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Studio</Link>
           <Link href="/about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">About</Link>
-          <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Contact</Link>
+          <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Reach Us</Link>
         </div>
 
         <div className="flex items-center gap-6">
