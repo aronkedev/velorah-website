@@ -13,7 +13,6 @@ Velorah UI offers a **Split-Preview Architecture** where every component can be 
 - **AI Component Generator (BETA)**: A high-fidelity "Generative UI" experience for prompt-based component architecting.
 - **Mobile-First Registry**: A centralized registry of premium components (Navbars, Heros, Cards, Pricing) following a strict mobile-first paradigm.
 - **Personalized Favorites**: A persistence system to curate and save components for future projects.
-- **Editorial Journal**: A technical blog focused on modern UI design patterns and Tailwind CSS optimization.
 
 ## 🧱 Tech Stack
 - **Framework**: Next.js 16 (App Router)
@@ -27,7 +26,6 @@ Velorah UI offers a **Split-Preview Architecture** where every component can be 
 - `/app/library`: The component explorer and preview engine.
 - `/data/components`: Centralized registry of code strings and React nodes.
 - `/components/library`: Isolated, reusable component implementations.
-- `/blog`: Editorial journal system.
 
 ## 💼 Interview Explanation
 This project demonstrates several senior-level engineering skills:
