@@ -26,8 +26,16 @@ export function Footer() {
           <div className="space-y-4 text-sm text-zinc-500">
              <h5 className="text-xs font-bold uppercase tracking-widest text-white">Legal</h5>
              <ul className="space-y-2">
-               <li>Privacy Policy</li>
-               <li>Terms of Service</li>
+               <li>
+                <Link href="/privacy" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+              </li>
              </ul>
           </div>
         </div>
@@ -35,7 +43,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600">
         <p>© 2026 Naevox Studio. All rights reserved.</p>
         <div className="flex gap-6 uppercase tracking-wider">
-           <span>London based</span>
+           <span>Kerala, India</span>
            <span className="text-emerald-500 animate-pulse">Available for work</span>
         </div>
       </div>

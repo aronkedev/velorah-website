@@ -50,10 +50,10 @@ export default function Home() {
             >
               Get a Free Quote
             </Link>
-            <button className="px-8 py-5 text-zinc-500 hover:text-white transition-colors text-sm font-medium flex items-center gap-2 group">
+            <Link href="#why" className="px-8 py-5 text-zinc-500 hover:text-white transition-colors text-sm font-medium flex items-center gap-2 group">
               View Our Work
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
         </section>
 
