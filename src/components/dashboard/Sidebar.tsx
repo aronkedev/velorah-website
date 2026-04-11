@@ -50,7 +50,7 @@ export function DashboardSidebar() {
           <Sparkles className="h-5 w-5 text-black" />
         </div>
         <h1 className="text-xl font-display font-medium tracking-tight">
-          Velorah<span className="text-xs ml-1 opacity-50 font-normal">SaaS</span>
+          Naevox<span className="text-xs ml-1 opacity-50 font-normal">SaaS</span>
         </h1>
       </div>
 

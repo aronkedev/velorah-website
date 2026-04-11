@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Send, CheckCircle2, ChevronDown } from 'lucide-react';
-import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
+import { NaevoxNavbar } from '@/components/layout/NaevoxNavbar';
 import { Footer } from '@/components/layout/Footer';
 
 export default function Contact() {
@@ -39,7 +39,7 @@ export default function Contact() {
         />
       </video>
 
-      <VelorahNavbar />
+      <NaevoxNavbar />
 
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-20 pt-28">
         <AnimatePresence mode="wait">

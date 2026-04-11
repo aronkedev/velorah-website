@@ -10,7 +10,7 @@ export default function FavoritesPage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const favoriteIds = JSON.parse(localStorage.getItem('velorah_favorites') || '[]');
+    const favoriteIds = JSON.parse(localStorage.getItem('naevox_favorites') || '[]');
     const favoriteComponents = componentRegistry.filter(c => favoriteIds.includes(c.id));
     setFavorites(favoriteComponents);
     setIsLoaded(true);

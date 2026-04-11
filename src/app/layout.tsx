@@ -15,7 +15,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Velorah | Pioneering Ideas",
+  title: "Naevox | Pioneering Ideas",
   description: "Where dreams rise through the silence.",
 };
 

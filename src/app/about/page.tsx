@@ -1,6 +1,6 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { Sparkles, ArrowRight, ShieldCheck, Heart, Zap, Code, Layout, Globe, Send } from 'lucide-react';
-import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
+import { NaevoxNavbar } from '@/components/layout/NaevoxNavbar';
 import { Footer } from '@/components/layout/Footer';
 
 import { companyValues, skillSet } from '@/data/site-content';
@@ -23,7 +23,7 @@ export default function About() {
         />
       </video>
 
-      <VelorahNavbar />
+      <NaevoxNavbar />
 
       <main className="relative z-10 pt-28">
         {/* About Hero & Bio */}
@@ -37,15 +37,15 @@ export default function About() {
             className="text-6xl sm:text-7xl md:text-8xl tracking-[-0.04em] font-normal animate-fade-rise mb-12"
             style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}
           >
-            I’m Aron, making <em className="not-italic text-zinc-500 italic">the web</em> a little more <em className="not-italic text-zinc-500">beautiful.</em>
+            Iâ€™m Aron, making <em className="not-italic text-zinc-500 italic">the web</em> a little more <em className="not-italic text-zinc-500">beautiful.</em>
           </h1>
           
           <div className="space-y-6 text-zinc-400 text-lg sm:text-xl leading-relaxed animate-fade-rise-delay max-w-3xl">
             <p>
-              I’m a self-taught developer driven by a singular obsession: building digital homes that reflect the quality of the brands they represent. 
+              Iâ€™m a self-taught developer driven by a singular obsession: building digital homes that reflect the quality of the brands they represent. 
             </p>
             <p>
-              Parallel to my work at Velorah, I’m specializing in **cybersecurity**. This dual focus means I don’t just build for aesthetics—I build for resilience. I started Velorah to bridge the gap between high-end design and high-performance engineering, helping creators and local businesses get online without the corporate friction.
+              Parallel to my work at Naevox, Iâ€™m specializing in **cybersecurity**. This dual focus means I donâ€™t just build for aestheticsâ€”I build for resilience. I started Naevox to bridge the gap between high-end design and high-performance engineering, helping creators and local businesses get online without the corporate friction.
             </p>
           </div>
         </section>
@@ -132,3 +132,4 @@ export default function About() {
     </div>
   );
 }
+

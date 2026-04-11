@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Sparkles, ArrowRight, Check, HelpCircle, ArrowUpRight } from 'lucide-react';
-import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
+import { NaevoxNavbar } from '@/components/layout/NaevoxNavbar';
 import { Footer } from '@/components/layout/Footer';
 
 import { pricingTiers, studioFAQs } from '@/data/site-content';
@@ -23,7 +23,7 @@ export default function Studio() {
         />
       </video>
 
-      <VelorahNavbar />
+      <NaevoxNavbar />
 
       <main className="relative z-10 pt-28">
         {/* Page Hero */}

@@ -42,7 +42,7 @@ export default function AuthPage() {
             <p className="text-muted-foreground text-sm">
               {isLogin
                 ? 'Enter your credentials to access your dashboard'
-                : 'Start building your next big idea with Velorah'}
+                : 'Start building your next big idea with Naevox'}
             </p>
           </div>
 

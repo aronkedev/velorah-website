@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
         <div className="space-y-6">
           <Link href="/" className="text-3xl tracking-tight text-white font-display" style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}>
-            Velorah<sup className="text-xs">®</sup>
+            Naevox<sup className="text-xs">®</sup>
           </Link>
           <p className="text-zinc-500 text-sm max-w-xs leading-relaxed">
              Artistry meets architecture. We build premium digital homes for the ambitious.
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600">
-        <p>© 2024 Velorah Studio. All rights reserved.</p>
+        <p>© 2026 Naevox Studio. All rights reserved.</p>
         <div className="flex gap-6 uppercase tracking-wider">
            <span>London based</span>
            <span className="text-emerald-500 animate-pulse">Available for work</span>

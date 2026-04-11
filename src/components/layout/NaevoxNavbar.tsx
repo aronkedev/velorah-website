@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export function VelorahNavbar() {
+export function NaevoxNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -51,7 +51,7 @@ export function VelorahNavbar() {
             className="text-3xl tracking-tight text-white font-display relative z-[110]" 
             style={{ fontFamily: "var(--font-display), 'Instrument Serif', serif" }}
           >
-            Velorah<sup className="text-xs">®</sup>
+            Naevox<sup className="text-xs">®</sup>
           </Link>
 
           {/* Desktop Navigation */}

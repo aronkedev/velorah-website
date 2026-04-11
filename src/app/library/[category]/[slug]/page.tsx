@@ -34,19 +34,19 @@ export default function ComponentDetailPage({
   const component = componentRegistry.find(c => c.id === slug);
 
   useEffect(() => {
-    const favorites = JSON.parse(localStorage.getItem('velorah_favorites') || '[]');
+    const favorites = JSON.parse(localStorage.getItem('naevox_favorites') || '[]');
     setIsFavorite(favorites.includes(slug));
   }, [slug]);
 
   const toggleFavorite = () => {
-    const favorites = JSON.parse(localStorage.getItem('velorah_favorites') || '[]');
+    const favorites = JSON.parse(localStorage.getItem('naevox_favorites') || '[]');
     let newFavorites;
     if (favorites.includes(slug)) {
       newFavorites = favorites.filter((id: string) => id !== slug);
     } else {
       newFavorites = [...favorites, slug];
     }
-    localStorage.setItem('velorah_favorites', JSON.stringify(newFavorites));
+    localStorage.setItem('naevox_favorites', JSON.stringify(newFavorites));
     setIsFavorite(!isFavorite);
   };
 

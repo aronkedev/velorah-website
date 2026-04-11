@@ -73,7 +73,7 @@ export interface Project {
 
 export const portfolioProjects: Project[] = [
   {
-    name: "Velorah",
+    name: "Naevox",
     description: "A premium freelance agency platform featuring cinematic visuals and glassmorphic UI.",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion", "High Performance"],
     link: "https://velorah-website.vercel.app",
@@ -122,7 +122,7 @@ export const skillSet = [
 ];
 
 /**
- * Homepage Features (The "Why Velorah" Section)
+ * Homepage Features (The "Why Naevox" Section)
  */
 export const brandFeatures = [
   {

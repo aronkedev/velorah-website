@@ -37,7 +37,7 @@ export default function LibrarySidebar() {
         <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center">
           <Sparkles className="h-5 w-5 text-black" />
         </div>
-        <span>Velorah<span className="text-zinc-500 font-normal">UI</span></span>
+        <span>Naevox<span className="text-zinc-500 font-normal">UI</span></span>
       </div>
 
       <div className="relative mb-8">

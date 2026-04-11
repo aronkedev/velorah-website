@@ -81,7 +81,7 @@ export default async function PublicFunnelPage({
       {/* Footer Branding */}
       <div className="mt-20 opacity-30 flex items-center gap-2">
         <div className="h-4 w-4 bg-white rounded-full" />
-        <span className="text-xs font-display tracking-tightest">Powered by Velorah</span>
+        <span className="text-xs font-display tracking-tightest">Powered by Naevox</span>
       </div>
     </div>
   )

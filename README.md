@@ -1,12 +1,12 @@
-# Velorah UI: Professional Component Platform
+# Naevox UI: Professional Component Platform
 
-Velorah UI is a production-level **Developer UI System & Component Platform** designed for modern engineering teams. It provides a highly interactive environment for browsing, previewing, and instantly exporting mobile-first UI components built with React and Tailwind CSS.
+Naevox UI is a production-level **Developer UI System & Component Platform** designed for modern engineering teams. It provides a highly interactive environment for browsing, previewing, and instantly exporting mobile-first UI components built with React and Tailwind CSS.
 
 ## 🎯 The Problem
 Developers often struggle to find truly mobile-first, professional UI components that don't require heavy refactoring. Static libraries lack the interactivity needed to test components across breakpoints before integration.
 
 ## ✅ The Solution
-Velorah UI offers a **Split-Preview Architecture** where every component can be tested live across simulated Mobile, Tablet, and Desktop viewports. 
+Naevox UI offers a **Split-Preview Architecture** where every component can be tested live across simulated Mobile, Tablet, and Desktop viewports. 
 
 ## ✨ Key Features
 - **Interactive Preview Engine**: Instant viewport switching (375px / 768px / 1280px) and dark/light mode toggling.
@@ -35,4 +35,4 @@ This project demonstrates several senior-level engineering skills:
 4. **Performance**: Optimized PrismJS syntax highlighting and Framer Motion micro-interactions.
 
 ---
-Built by **Velorah Team** — *Crafting interfaces at the speed of thought.*
+Built by **Naevox Team** — *Crafting interfaces at the speed of thought.*

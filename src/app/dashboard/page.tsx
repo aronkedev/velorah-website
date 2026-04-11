@@ -95,7 +95,7 @@ export default async function DashboardPage() {
                   <div className="h-2 w-2 rounded-full bg-sky-500" />
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium group-hover:text-sky-400 transition-colors">New lead acquired via "Velorah Glass" funnel</p>
+                  <p className="text-sm font-medium group-hover:text-sky-400 transition-colors">New lead acquired via "Naevox Glass" funnel</p>
                   <p className="text-xs text-zinc-500 mt-0.5">2 hours ago • lead: sarah@example.com</p>
                 </div>
               </div>

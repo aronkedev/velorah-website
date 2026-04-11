@@ -13,7 +13,7 @@ export default function Navbar01() {
           <div className="h-8 w-8 rounded-lg bg-white flex items-center justify-center">
             <Command className="h-5 w-5 text-black" />
           </div>
-          <span className="text-white">Velorah UI</span>
+          <span className="text-white">Naevox UI</span>
         </div>
 
         {/* Global Nav - Hidden on Mobile */}

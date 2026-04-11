@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Sparkles, ArrowRight, Zap, ShieldCheck, User } from 'lucide-react';
-import { VelorahNavbar } from '@/components/layout/VelorahNavbar';
+import { NaevoxNavbar } from '@/components/layout/NaevoxNavbar';
 import { Footer } from '@/components/layout/Footer';
 
 import { brandFeatures } from '@/data/site-content';
@@ -22,7 +22,7 @@ export default function Home() {
         />
       </video>
 
-      <VelorahNavbar />
+      <NaevoxNavbar />
 
       <main className="relative z-10 pt-28">
         {/* Hero Section (Original Minimal Visual Layout with Agency Copy) */}
@@ -58,7 +58,7 @@ export default function Home() {
         </section>
 
 
-        {/* Why Velorah (Simple Trust Points) */}
+        {/* Why Naevox (Simple Trust Points) */}
         <section id="why" className="max-w-7xl mx-auto px-8 py-32 border-t border-white/5">
            <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
               {brandFeatures.map((feature, idx) => (
